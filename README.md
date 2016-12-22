@@ -1,4 +1,4 @@
-# webpack-react-training
+# webpack-handlebars-zetpo
 
 Project Tasks
 
