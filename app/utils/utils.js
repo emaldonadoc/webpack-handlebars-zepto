@@ -1,6 +1,6 @@
 import $ from "npm-zepto";
 
-var Utils ={
+var Utils = {
   render: (container, template, json) =>{
     $(container).append(template(json));
   },
