@@ -1,20 +1,16 @@
 import $ from "npm-zepto";
-import view from "./first-form-view.hbs"
-import utils from "../utils/utils"
+import View from "../base/view"
+import template from "./first-form-view.hbs"
 var container = "#app";
 
-export default class FirsFormView {
+export default class FirsFormView extends View {
 
-  constructor () {
-    this.render();
-    this.attach();
-  }
-
-  render() {
-    utils.render(container, view, /*data*/ {name: "death"});
+  constructor (data) {
+    super(container, template, data);
   }
 
   attach () {
+    console.log("ATTACH FUNCTION ");
     $('#entry-form').click( (e) =>{
         e.preventDefault;
         console.log("click on entry form");
