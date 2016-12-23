@@ -1,5 +1,9 @@
 module.exports = {
   context: __dirname + "/app",
+  devServer: {
+    inline:true,
+    port: 8888
+  },
   entry: {
     javascript: "./app.js",
     html: "./index.html",
