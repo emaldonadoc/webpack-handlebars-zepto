@@ -1,0 +1,33 @@
+<div id="list-bols-table">
+  <table class="u-full-width">
+    <thead>
+      <tr>
+        <th>BOL #</th>
+        <th>Driver Name</th>
+        <th>Carrier</th>
+        <th>Truck</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each bols}}
+        <tr class="list-bols-tr" data-id="{{bolId}}" data-number="{{bolNumber}}">
+          <td>{{bolNumber}}</td>
+          <td>{{driverName}}</td>
+          <td>{{truckCarrier}}</td>
+          <td>{{truckNumber}}</td>
+        </tr>
+        {{else}}
+          <tr>
+            <td colspan="4" class="no-content-msg">
+              <b>No Active BOLs</b>
+            </td>
+          </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
+
+<div class="center w30" id="list-bols-loading">
+  <label> Loading BOLs </label>
+  <img class="loading" src="./assets/images/loading.gif" alt="loading">
+</div>

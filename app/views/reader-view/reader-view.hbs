@@ -1,0 +1,14 @@
+<div class="reading" id="rtx-reader" data-id="{{id}}" data-number="{{number}}">
+  <div class="center w100">
+    <h4> <p id="rtx-reader-title">Please scan your driver's license,<br> BOL: </p> {{number}}</h4>
+  </div>
+  <div class="barcode">
+    <img id="magnify" class="loading" src="./assets/images/magnify.gif" alt="reading">
+    <input name="license" id="reader-hidden-license">
+  </div>
+  <div class="center reading-btns">
+    <button id="rtx-reading-cancel" class="btnReader" type="button">Cancel</button>
+    <input id="rtx-reading-next" style="display:none" class="button-primary btnReader" value="Next" type="submit">
+    <label id="rtx-message"> </label>
+  </div>
+</div>

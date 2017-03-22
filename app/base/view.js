@@ -19,6 +19,7 @@ export default class View {
   modelUpdate(data) {
     this.data = data;
     this.render();
+    this.attach();
   }
 
 }

@@ -1,0 +1,68 @@
+<div class="center" id="rtx-preview" data-id="{{bolId}}" data-number="{{bolNumber}}">
+    <div class="row">
+      <div class="three columns">
+        <label for="bolName">BOL #:</label>
+        <input class="u-full-width" value="{{bolNumber}}" placeholder="Bol Name" id="bolName" type="text" readonly="readonly">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="three columns">
+        <label for="jobName">Purchase Order</label>
+        <input class="u-full-width" value="{{jobName}}" placeholder="Purchase Order" id="jobName" type="text" readonly="readonly">
+      </div>
+
+      <div class="three columns">
+        <label for="carrier">Carrier</label>
+        <input class="u-full-width" value="{{truckCarrier}}" placeholder="Carrier" id="carrier" type="text" readonly="readonly">
+      </div>
+
+      <div class="three columns">
+        <label for="truckNumber">Truck Number</label>
+        <input class="u-full-width" value="{{truckNumber}}" placeholder="Truck Number" id="truckNumber" type="text" readonly="readonly">
+      </div>
+
+      <div class="three columns">
+        <label for="truckDriver">Truck Driver</label>
+        <input class="u-full-width" value="{{driverName}}" placeholder="Truck Driver" id="truckDriver" type="text" readonly="readonly">
+      </div>
+
+    </div>
+
+    <div class="row">
+      <table class="u-full-width preview-table">
+        <thead>
+          <tr>
+            <th width="35%">Source</th>
+            <th width="35%">Product</th>
+            <th  width="15%">Gross </th>
+            <th  width="15%">Net</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each drafts}}
+            <tr>
+              <td>{{railcarName}}</td>
+              <td>{{product}}</td>
+              <td>{{weightFormat grossWeight}}</td>
+              <td>{{weightFormat netWeight}}</td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="row">
+      <div class="two columns">&nbsp;</div>
+      <div class="three columns"><label>Gross:</label> {{weightFormat gross}}</div>
+      <div class="three columns"><label>Tare:</label> {{weightFormat tare}}</div>
+      <div class="three columns"><label>Net:</label> {{weightFormat net}}</div>
+    </div>
+
+  <div class="center preview-btns">
+    <input id="rtx-cancel-preview" class="button" value="Cancel">
+    <input id="rtx-submit-preview" class="button-primary" value="Confirm" type="submit">
+  </div>
+
+
+</div>
